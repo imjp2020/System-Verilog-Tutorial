@@ -1,11 +1,14 @@
+//===================================================================================
+//    Data types assigned with maxumum values and overflow it
+//===================================================================================
+
 module sv_data_types;
     
      // all int's default signed in nature 
      //make unsigned ,+1 then roll over  00000
-     int       unsigned           int_a='1;  		  //0000
+     int       unsigned           int_a='1;  		//0000
      shortint  unsigned       short_int_a='1;  		//0000
      longint   unsigned       long_int_a='1;  		//0000
-  
      integer   unsigned      integer_a='1; 		    //zzz
     
      reg[3:0]       reg_a1;               // xxx
@@ -14,8 +17,8 @@ module sv_data_types;
      logic          logic_one_bit;        //xxx
      string         string_a="";          //NA
      string          new_hier=" ";
-     bit[3:0]       bit_a;                //0000
-     bit            bit_one;              //0000
+     bit[3:0]       bit_a;                  //0000
+     bit            bit_one;               //0000
      byte unsigned   	byte_a;             //000
   	 real        	real_a=1.234567890;     //0.000
   	 time        	time_a=1.22;            //xxx
