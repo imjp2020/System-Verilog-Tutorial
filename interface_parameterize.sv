@@ -36,11 +36,9 @@ endmodule
 //    top module    
 //------------------------------------------
 module top;
-  
-  
-  logic clk=0;
-  
- always #10 clk = ~clk ;
+ 
+  logic clk=0; 
+  always #10 clk = ~clk ;
   
   simple_bus  sb_intf(clk);
   simple_bus  #((32),(64)) wide_intf(clk) ;
@@ -48,12 +46,11 @@ module top;
   memmod   u_mem(wide_intf);
   cpumod  u_cpu(sb_intf);
   
-  
     initial 
       begin
-     $dumpfile("dump.vcd");
-     $dumpvars();
-     #500;
-     $finish();
+       $dumpfile("dump.vcd");
+       $dumpvars();
+       #500;
+       $finish();
     end
 endmodule  
