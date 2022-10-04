@@ -11,6 +11,7 @@ module this_task_func;
   //--> No direction specified for args SUM will be wrong 
   
   //Input ,output and inout args needs to be specified for SUM
+  //function void my_task(int aa,int bb,int cc); -try this 
   function void my_task(input int aa,bb,output int cc);
      a=aa;
      b=bb;
