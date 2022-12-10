@@ -13,10 +13,12 @@ class item;
                     }                 
  */
   
-constraint c_1     { val ==((mode==LOW) ? 10 :150) ;}
-//constraint c_2   { solve mode before val ;    mode == ((val ) ? MID :LOW) ;}             
-// constraint c_3  { solve val before mode ;} 
-    
+ constraint c_1    { val ==((mode==LOW) ? 10 :150) ;}
+//constraint c1_0  { solve mode before val ;    mode == ((val ) ? MID :LOW) ;}             
+//constraint c1_1  { solve val before mode ;} 
+//constraint c2_0  { solve mode before val ;} 
+//constraint c2_1  { (mode ==LOW) -> val < 30  ;} 
+  
 function void print();
    $display("mode=%s val=%d",mode.name(),val);
 endfunction 
